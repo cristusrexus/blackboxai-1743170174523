@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certification | Andrei Cristian-Mihai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            margin: 0;
+            color: var(--dark);
+        }
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .back-btn {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .certificate-card {
+            background: white;
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+        .certificate-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .verify-btn {
+            background: var(--primary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        .course-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0.5rem 0;
+        }
+        .modules-container {
+            margin-top: 2rem;
+        }
+        .module {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .module-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+        .module-content {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+            display: none;
+        }
+        .module.active .module-content {
+            display: block;
+        }
+        .module-toggle {
+            transition: transform 0.3s ease;
+        }
+        .module.active .module-toggle {
+            transform: rotate(180deg);
+        }
+        .topic-list {
+            columns: 2;
+            list-style-type: none;
+            padding: 0;
+        }
+        .topic-list li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .topic-list li:before {
+            content: "•";
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -0.25rem;
+        }
+        @media (max-width: 768px) {
+            .topic-list {
+                columns: 1;
+            }
+            .course-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </header>
+
+    <div class="container">
+        <h1>My Certification</h1>
+        
+        <div class="certificate-card">
+            <div class="certificate-header">
+                <h2>Java from Scratch</h2>
+                <a href="https://app.diplomasafe.com/en-US/s/92303240/9a829d9a" target="_blank" class="verify-btn">
+                    <i class="fas fa-shield-alt"></i> Verify Certificate
+                </a>
+            </div>
+            <p>Completed 280-hour intensive training program at Software Development Academy (April-December 2024)</p>
+            
+            <div class="course-stats">
+                <div class="stat-card">
+                    <div>Total Hours</div>
+                    <div class="stat-value">280</div>
+                </div>
+                <div class="stat-card">
+                    <div>Attendance</div>
+                    <div class="stat-value">85%</div>
+                </div>
+                <div class="stat-card">
+                    <div>Modules</div>
+                    <div class="stat-value">6</div>
+                </div>
+                <div class="stat-card">
+                    <div>Final Grade</div>
+                    <div class="stat-value">A</div>
+                </div>
+            </div>
+            
+            <div class="modules-container">
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Java Language (100 hours)</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topic-list">
+                            <li>Java Fundamentals</li>
+                            <li>Object-Oriented Programming</li>
+                            <li>Collections Framework</li>
+                            <li>Multithreading</li>
+                            <li>Stream API</li>
+                            <li>Exception Handling</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Software Engineering (28 hours)</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topic-list">
+                            <li>Software Testing</li>
+                            <li>Unit Testing (JUnit)</li>
+                            <li>Integration Testing</li>
+                            <li>Design Patterns</li>
+                            <li>Clean Code Principles</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Databases (35 hours)</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topic-list">
+                            <li>SQL Fundamentals</li>
+                            <li>Database Design</li>
+                            <li>Query Optimization</li>
+                            <li>JDBC</li>
+                            <li>Hibernate ORM</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="module">
+                    <div class="module-header">
+                        <h3>Frontend & Backend (66 hours)</h3>
+                        <i class="fas fa-chevron-down module-toggle"></i>
+                    </div>
+                    <div class="module-content">
+                        <ul class="topic-list">
+                            <li>HTML/CSS/JavaScript</li>
+                            <li>Spring Framework</li>
+                            <li>Spring Boot</li>
+                            <li>REST API Development</li>
+                            <li>Spring Security</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Module accordion functionality
+        document.querySelectorAll('.module-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const module = this.parentElement;
+                module.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
