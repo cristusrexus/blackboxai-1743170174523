@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Andrei Cristian-Mihai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light);
+            margin: 0;
+            color: var(--dark);
+        }
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1rem 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+        .back-btn {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .profile-img {
+            width: 100%;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .skill-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .skill-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        .skill-level {
+            height: 10px;
+            background: #e2e8f0;
+            border-radius: 5px;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+        .skill-level-bar {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 5px;
+        }
+        .java { width: 90%; }
+        .spring { width: 85%; }
+        .sql { width: 80%; }
+        .hibernate { width: 75%; }
+        .javascript { width: 70%; }
+        @media (max-width: 768px) {
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Back to Home
+        </a>
+    </header>
+
+    <div class="container">
+        <div class="profile-section">
+            <div>
+                <img src="https://scontent.fias1-1.fna.fbcdn.net/v/t39.30808-6/482095278_631228436272652_8705236917456153528_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_ohc=8wg_cz8Uyk0Q7kNvgHD3Y4F&_nc_oc=Adns4cIZJPpGQYwNzheepMf_iz66tAx81o6R62TT7rfWBdN2h4znK_ZXsIkVc6WHG_E&_nc_zt=23&_nc_ht=scontent.fias1-1.fna&_nc_gid=8edeGwFs6MzW5l8pRiRaww&oh=00_AYHzuy7igOkacBXtVcT8UZoXYqje8XR-q1PFniq2Vdi7qA&oe=67EC94A8" 
+                     alt="Profile" class="profile-img">
+            </div>
+            <div>
+                <h1>About Me</h1>
+                <p>280-hour intensive training in Software Development Academy (April-December 2024). Skilled in Java, Spring Framework, and full-stack development with an attendance percentage of 85%.</p>
+                <p>I enjoy building strong backend systems and building the best solution for complex problems. My training in SDA has provided me with theoretical skills as well as hands-on experience in modern software development.</p>
+            </div>
+        </div>
+
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <h3>Java Development</h3>
+                <p>Advanced Java programming including collections, multithreading, and JDBC</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar java"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Spring Framework</h3>
+                <p>Spring Boot, Spring MVC, and Spring Security implementations</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar spring"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>SQL & Databases</h3>
+                <p>Database design, query optimization, and Hibernate ORM</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar sql"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>Hibernate</h3>
+                <p>Object-relational mapping and JPA implementations</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar hibernate"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <p>Frontend development with modern JavaScript</p>
+                <div class="skill-level">
+                    <div class="skill-level-bar javascript"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
